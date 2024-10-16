@@ -1,0 +1,62 @@
+//revisão da prova
+
+//numero 1 letra a ex1
+#include <stdio.h>
+int main(){
+//j +=2 fora do escopo
+//for(inicialização; condição; atualização); os tres elementos são opicionais for(;;;); loop infinito(ex: sistema operacional da maquina, robo, microcontrolador do micro ondas) ";"comando nulo
+
+  /*for(int i=1; i<450; i++)//estrutura de repetição
+      if(i%2 == 0) //estrutura
+        printf("%d ", i);//estrutura sequencial
+      */
+    int soma = 0;
+    for(int i=2; i<450; i+=2){//estrutura de repetição
+//printf("%d ", i);
+       soma += i;
+//printf("%d = %d\n", i, soma);
+}
+     printf("Soma: %d\n", soma);
+/*usando while
+escopo (local onde ela foi declarada ate o bloco q ela foi declada)
+while(condição){
+  corpo da estrutura
+}
+/*
+i = 2, soma=0;
+for(;;){
+if(i>=450)
+break;
+soma += i
+i+= 2;
+}
+*/
+*/
+/* int i=2;
+while(i<450){
+  soma += i;
+  i+=2
+}
+printf("Soma: %d\n", soma);
+*/
+  return 0;
+}
+
+//ex2
+
+#include <stdio.h>
+
+int main(){
+  int v[20];
+for(int i=0; i<=20; i++){
+  scanf("%d", &v[i]);
+  printf("%d", v[i]);
+}
+int menor = v[0];
+for(int i=0; i<20; i++){
+    if(v[i]<menor)
+menor = v[i];
+
+printf("Menor: %d\n, menor)
+  return 0;
+}
