@@ -60,3 +60,232 @@ menor = v[i];
 printf("Menor: %d\n, menor)
   return 0;
 }
+
+//ex1 letra b
+
+#include <stdio.h>
+
+int main(){   
+    int s = 0;
+    
+    for(int i = 1; i<425; i+=2){
+        s += i;
+    }
+    printf("Soma dos numeros naturais impares: %d\n", s);
+    return 0;
+}
+//ex1 letra c
+
+#include <stdio.h>
+
+int main(){   
+    int p = 1;
+    
+    for(int i=2; i<20; i+=2){
+        p *= i;
+    }
+    printf("Produto: %d\n", p);
+    return 0;
+}
+//ex1 letra d
+
+#include <stdio.h>
+
+int main(){   
+    int p = 1;
+    
+    for(int i=1; i<19; i+=2){
+        p *= i;
+    }
+    printf("Produto: %d\n", p);
+    return 0;
+}
+//ex2 letra b
+
+#include <stdio.h>
+#define tam 20
+
+int main(){
+    int v[tam];
+    
+    for(int i=1; i<=tam; i++){
+        printf("Informe um valor para a posicao %d\n", i);
+        scanf("%d", &v[i]);//leitura e armazenamento
+    }
+    
+    int maior = v[tam];
+    for(int i=1; i<=tam; i++){
+        if(v[i]>maior){
+            maior = v[i];
+        }
+    }
+    printf("Maior: %d\n", maior);
+    
+    return 0;
+}
+//ex2 letra c
+
+#include <stdio.h>
+#define tam 20
+
+int main(){
+    int v[tam];
+    
+    for(int i=1; i<=tam; i++){
+        printf("Informe um valor para a posicao %d\n", i);
+        scanf("%d", &v[i]);//leitura e armazenamento
+    }
+    
+    int menor_neg = 0;
+    for(int i=1; i<=tam; i++){
+        if(v[i]<menor_neg){
+            menor_neg = v[i];
+        }
+    }
+    printf("Menor elemento negativo: %d\n", menor_neg);
+    
+    return 0;
+}
+//ex2 letra d
+
+#include <stdio.h>
+#define tam 20
+
+int main(){
+    int v[tam];
+    
+    for(int i=1; i<=tam; i++){
+        printf("Informe um valor para a posicao %d\n", i);
+        scanf("%d", &v[i]);//leitura e armazenamento
+    }
+    
+    int maior_neg = -1;
+    for(int i=1; i<=tam; i++){
+        if(v[i]<0 && v[i]>maior_neg ){
+            maior_neg = v[i];
+        }
+    }
+    
+    if(maior_neg != -1){
+        printf("Maior elemento negativo: %d\n", maior_neg);
+    }else{
+        printf("O maior elemento negativo nao foi encontrado");
+    }
+    
+    return 0;
+}
+
+//ex3 letra a
+#include <stdio.h>
+float Soma_em_serie(int n);//somatorio soma valores
+
+int main(){
+    int n;
+    
+    printf("Informe um valor inteiro: \n");
+    scanf("%d", &n);
+    
+    printf("Soma: %.2f", Soma_em_serie(n));
+    
+    return 0;
+}
+float Soma_em_serie(int n){
+    float s = 2;//primeiro termo
+    for(int i = 3; i<n+3; i++){ //primeiro denominador e 3 e vao ser 5 termos para somar
+        if(i%2 != 0){
+            s -= 1.0/i;
+        }else{
+            s += 1.0/i;
+        }
+    }
+    return s;
+}
+
+//ex3 letra b
+
+#include <stdio.h>
+float Soma_em_serie(int n);//somatorio soma valores
+
+int main(){
+    int n;
+    
+    printf("Informe um valor inteiro: \n");
+    scanf("%d", &n);
+    
+    printf("Soma: %.3f", Soma_em_serie(n));
+    
+    return 0;
+}
+float Soma_em_serie(int n){
+    float s = -2;//primeiro termo
+    for(int i = 3; i<n+3; i++){ //primeiro denominador e 3 e vao ser 5 termos para somar
+        if(i%2 != 0){
+            s += 1.0/i;
+        }else{
+            s -= 1.0/i;
+        }
+    }
+    return s;
+}
+
+ex3 letra c
+#include <stdio.h>
+float Soma_em_serie(int n);//somatorio soma valores
+
+int main(){
+    int n;
+    
+    printf("Informe um valor inteiro: \n");
+    scanf("%d", &n);
+    
+    printf("Soma: %.3f", Soma_em_serie(n));
+    
+    return 0;
+}
+float Soma_em_serie(int n){
+    float s = 3;//primeiro termo
+    float numerador = 2;
+    float denominador  = 3;
+    
+    for(int i = 0; i<n; i++){ //primeiro denominador e 3 e vao ser 5 termos para somar
+        if(i%2 != 0){//verifica se o indice e par ou impar
+            s += numerador/denominador;
+        }else{
+            s -= numerador/denominador;
+        }
+        numerador +=2;
+        denominador +=2;
+    }
+    return s;
+}
+
+//ex4 letra d
+#include <stdio.h>
+float Soma_em_serie(int n);//somatorio soma valores
+
+int main(){
+    int n;
+    
+    printf("Informe um valor inteiro: \n");
+    scanf("%d", &n);
+    
+    printf("Soma: %.3f", Soma_em_serie(n));
+    
+    return 0;
+}
+float Soma_em_serie(int n){
+    float s = -2;//primeiro termo
+    float numerador = 3;
+    float denominador  = 2;
+    
+    for(int i = 0; i<n; i++){ //primeiro denominador e 3 e vao ser 5 termos para somar
+        if(i%2 != 0){//verifica se o indice e par ou impar
+            s -= numerador/denominador;
+        }else{
+            s += numerador/denominador;
+        }
+        numerador += 3;
+        denominador += 3;
+    }
+    return s;
+}
