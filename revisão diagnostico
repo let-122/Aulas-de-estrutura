@@ -353,19 +353,67 @@ int main(){
 #include <stdio.h>
 
 //ex4 letra a
-int main(){
-    int qtd_esp = 4;
+#include <stdio.h>
 
-    for(int qtd_ast = 1; qtd_ast<=5; qtd_ast++){
-        for(int esp = 1; esp <= qtd_esp; esp++){
+//ex4 letra a
+int main(){
+    for(int qtd_ast = 1, qtd_esp = 4; qtd_ast<= 5; qtd_ast++, qtd_esp--){
+        for(int esp = 1; esp<=qtd_esp; esp++){
             printf(" ");
         }
         for(int ast = 1; ast <= qtd_ast; ast++){
             printf("*");
-    }
+        }
         printf("\n");
     }
-    
+    return 0;
+}
+letra b
+#include <stdio.h>
+
+//ex4 letra b
+int main(){
+    for(int qtd_ast = 5, qtd_esp = 0; qtd_ast>=1; qtd_ast--, qtd_esp++){
+        for(int esp = 0; esp<qtd_esp; esp++){
+            printf(" ");
+        }
+        for(int ast = 0; ast<qtd_ast; ast++){
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+letra c
+#include <stdio.h>
+
+//ex4 letra b
+int main(){
+    for(int qtd_ast = 1, qtd_esp = 4; qtd_ast<=9; qtd_ast+=2, qtd_esp--){
+        for(int esp = 0; esp<qtd_esp; esp++){
+            printf(" ");
+        }
+        for(int ast = 1; ast<=qtd_ast; ast++){
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+letra d
+#include <stdio.h>
+
+//ex4 letra b
+int main(){
+    for(int qtd_ast = 9, qtd_esp = 0; qtd_ast>=1; qtd_ast-=2, qtd_esp++){
+        for(int esp = 0; esp<qtd_esp; esp++){
+            printf(" ");
+        }
+        for(int ast = 0; ast<qtd_ast; ast++){
+            printf("*");
+        }
+        printf("\n");
+    }
     return 0;
 }
 
