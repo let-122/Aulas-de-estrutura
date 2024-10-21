@@ -289,3 +289,92 @@ float Soma_em_serie(int n){
     }
     return s;
 }
+#include <stdio.h>
+//ex3 letra a
+int main(){
+    int n;
+    printf("Entre com um numero de termo para o calculo expresso: \n");
+    scanf("%d", &n);
+
+    //printf("%d\n", n);
+    //se n= 5
+    if(n == 0){
+        printf("S = 0\n");
+    }else{
+        int den = 3, num = 1;
+        float s = 2;
+        for(int termo = 2, den=3; termo<=n; termo++, den++){
+            if(termo%2 == 0){
+                s -= (float)num/den;
+                //printf("%d/%d = %f\n", num, den, (float)num/den);
+            }else{
+                s += (float) num/den;
+                //printf("%d/%d = %f\n", num, den, (float)num/den);
+            }
+            
+        }
+        printf("s = %.2f/n", s);
+    }
+    
+
+    return 0;
+}
+#include <stdio.h>
+//ex3 letra d
+int main(){
+    int n;
+    printf("Entre com um numero de termo para o calculo expresso: \n");
+    scanf("%d", &n);
+
+    //printf("%d\n", n);
+    //se n= 5
+    if(n == 0){
+        printf("S = 0\n");
+    }else{
+        float s = -2;
+        for(int termo = 2, num = 3, den=2; termo<=n; termo++, num +=3, den+=3){
+         //ou s+= pow(-1, termo)*(float) num/demo; assim nao precisa usar condicional
+            if(termo%2 == 0){
+                s += (float)num/den;
+                printf("%d/%d = %f\n", num, den, (float)num/den);
+            }else{
+                s -= (float) num/den;
+                printf("%d/%d = %f\n", num, den, (float)-num/den);
+            }
+            
+        }
+        printf("s = %.2f/n", s);
+        //printf("num = %d\n", num);//fora do escopo()
+    }
+    
+
+    return 0;
+}//compilar com -lm(biblioteca matematica)
+#include <stdio.h>
+
+//ex4 letra a
+int main(){
+    int qtd_esp = 4;
+
+    for(int qtd_ast = 1; qtd_ast<=5; qtd_ast++){
+        for(int esp = 1; esp <= qtd_esp; esp++){
+            printf(" ");
+        }
+        for(int ast = 1; ast <= qtd_ast; ast++){
+            printf("*");
+    }
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+/*funções
+cabeçalho de um função (prototipo)
+tipo_retorno identificador(lista de parametros)
+>>soma de dois inteiros
+int soma(int v1, int v2){
+return v1+v2;
+chamda de função (chamada)
+identificador(lista de argumento)
+*/
