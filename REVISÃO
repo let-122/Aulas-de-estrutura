@@ -1,1 +1,25 @@
 
+/*funções
+cabeçalho de um função (prototipo)
+tipo_retorno identificador(lista de parametros)
+>>soma de dois inteiros
+int soma(int v1, int v2){
+return v1+v2;
+chamda de função (chamada)
+identificador(lista de argumento)
+*/
+1 bit (menor valor q consigo representar (0,1) 2 coisas
+n bits 0..2..2..2^n-1
+1BYIT = 8 BITS
+sizeof(int) retorno o numero de bytes
+4bytes = 8bits
+32bits = 2³2
+0..2³2-1 (quantidade de numeros )
+2³2/2= 2³1
+-2³1(numeros positivos)..-3,-2,-1,0,1,3..2³1-1(-1 E PRA TIRAR O 0)(numero negativo)
+
+printf("%d\n", sizeof(int));
+printf("%d = ....\n", INT_MAX);
+PRINTF("%D = ....
+OVERFLOW(ALEM DO Q PODE REPRESENTAR
+LONG DOBRO DE BYTES DO INTEIRO
