@@ -136,7 +136,7 @@ int main(){
         scanf("%d", &v[i]);//leitura e armazenamento
     }
     
-    int menor_neg = 0;
+    int menor_neg = v[0];
     for(int i=1; i<=tam; i++){
         if(v[i]<menor_neg){
             menor_neg = v[i];
@@ -159,7 +159,7 @@ int main(){
         scanf("%d", &v[i]);//leitura e armazenamento
     }
     
-    int maior_neg = -1;
+    int maior_neg = v[0];
     for(int i=1; i<=tam; i++){
         if(v[i]<0 && v[i]>maior_neg ){
             maior_neg = v[i];
@@ -426,3 +426,18 @@ return v1+v2;
 chamda de função (chamada)
 identificador(lista de argumento)
 */
+1 bit (menor valor q consigo representar (0,1) 2 coisas
+n bits 0..2..2..2^n-1
+1BYIT = 8 BITS
+sizeof(int) retorno o numero de bytes
+4bytes = 8bits
+32bits = 2³2
+0..2³2-1 (quantidade de numeros )
+2³2/2= 2³1
+-2³1(numeros positivos)..-3,-2,-1,0,1,3..2³1-1(-1 E PRA TIRAR O 0)(numero negativo)
+
+printf("%d\n", sizeof(int));
+printf("%d = ....\n", INT_MAX);
+PRINTF("%D = ....
+OVERFLOW(ALEM DO Q PODE REPRESENTAR
+LONG DOBRO DE BYTES DO INTEIRO
