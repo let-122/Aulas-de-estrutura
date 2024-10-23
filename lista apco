@@ -1,0 +1,59 @@
+//questão 1 
+#include <stdio.h>
+
+int soma_100(int n);//prototipo da função paa somar os 100 primeiros numeros naturais
+
+int main(){
+    int n = 100;
+    printf("A soma dos 100 primeiros numeros naturais eh: %d\n", soma_100(n));//resultado esperado 5050 
+    return 0;
+}
+int soma_100(int n){
+    int soma = 0;//criação de uma variavel soma 
+    for(int natural = 1; natural<=n; natural++){//criação de uma estrutura de repetição para passa pelos numeros naturais no intervalo[1,100]
+            soma += natural;//armazenanmeno da soma dos numeros naturais
+    }
+    return soma;//retorna a soma total
+}
+_______________________________________________________________________________
+//questão 2
+#include <stdio.h>
+
+int soma_50_impares(int n);//prototipo da função para somar 50 naturais impares
+
+int main(){
+    int n = 50;
+    printf("A soma dos 50 primeiros numeros impares eh: %d\n", soma_50_impares(n));//chamada da função e o resultado esperado
+    return 0;
+}
+
+int soma_50_impares(int n){
+    int soma = 0;//criação e inicialização da variavel soma
+    for(int natural = 1; natural<50; natural+=2){//estrutura de repetição para passar pelos numeros impares no intervalo de [1,50[
+        soma += natural;
+    }
+    return soma;
+}
+_____________________________________________________________________________
+//questão 3
+#include <stdio.h>
+
+int produto_impares(int n);//prototipo da função para calcular o prodto de n naturais impares 
+
+int main(){
+    int n;//criação de variavel n 
+    printf("Informe um numero natural\n");//pergunta ao usuario
+    scanf("%d", &n);//leitura da quantidade total de numeros impares
+
+    printf("O produto dos %d numeros naturais impares eh: %d\n", n, produto_impares(n));//chamada da função e resultado obtido pela função
+    return 0;
+}
+int produto_impares(int n){
+    int produto = 1;
+    for(int natural = 1; natural<=n; natural+=2){//criação de uma estrutura de repetição para passar pelos numeros naturais impares menores ou iguais a n[1,n]
+        produto *= natural;//calculo do produto dos aturais impares
+    }
+    return produto;//retorno do total do produto
+}
+________________________________________________________________________________
+
