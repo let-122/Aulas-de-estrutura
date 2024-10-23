@@ -56,4 +56,31 @@ int produto_impares(int n){
     return produto;//retorno do total do produto
 }
 ________________________________________________________________________________
+//questão 4
 
+#include <stdio.h>
+
+int somatorio(int n);//prototipo da função para somar uma sequencia de n termos
+
+int main(){
+    int n;//criação da variavel n
+    printf("Informe um numero n de termos para o calcul de S;\n");//pergunta ao usuario
+    scanf("%d", &n);//leitura do valor n
+
+    printf("O resultado do calculo de S eh: %d\n", somatorio(n));//chamada da função e impreenssão do resultado esperado
+    return 0;
+}
+int somatorio(int n){
+    int soma = 0;//criação da variavel soma
+    for(int termo = 1; termo<=n; termo++){//criação de uma estrutura de repetição(inicialização 1, condição ser menor igual a n,incremento de 1 em 1)
+        if(termo%2 == 0){//criação de uma estrutura condicional para verificar o sinal da sequencia
+            soma -= termo;
+        }else{
+            soma += termo;
+        }
+    }
+    return soma;
+}
+
+__________________________________________________________________________________
+//questão 5
